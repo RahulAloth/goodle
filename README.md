@@ -33,7 +33,7 @@ Until then, enjoy your cup of tea.
 
 goodle/  
 ├── goodle_core.py — Search + indexing logic  
-├── streamlit_app.py — UI (Streamlit)  
+├── goodle_app.py — UI (Streamlit)  
 ├── requirements.txt — Python dependencies  
 ├── Dockerfile — Build Goodle container  
 ├── docker-compose.yml — Run Goodle with folder mounting  
