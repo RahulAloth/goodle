@@ -129,7 +129,7 @@ Goodle will re‑index the new folder automatically.
 
 ## 🎁 Release Version (For Non‑Technical Users)
 
-If you want to give Goodle to someone who doesn’t know coding, they only need:
+If you want to give Goodle to someone who doesn’t want to compile or build, they only need:
 
 - Docker Desktop installed  
 - The Goodle folder  
@@ -194,15 +194,8 @@ docker compose down
 ---
 
 ## 🧩 Future Enhancements
-
-- Snippet highlighting  
-- Recency weight slider  
-- File preview panel  
-- Dark mode UI  
+- I am busy, you are welcome to do any modifications. 
 
 ---
 
-## 🎉 Goodle is Ready for Release
-
-This README is polished, beginner‑friendly, and professional.  
-Anyone — even a student — can run Goodle in minutes.
+## 🎉 Goodle is Ready for Use
