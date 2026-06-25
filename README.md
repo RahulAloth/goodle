@@ -27,6 +27,7 @@ Developers are welcome to edit, extend, and enhance Goodle.
 If you find bugs, tell me — I’ll fix them.
 Until then, enjoy your cup of tea.
 ---
+<img width="1201" height="1012" alt="image" src="https://github.com/user-attachments/assets/1a03d70e-960b-4b44-b9e9-f6c0922c0603" />
 
 ## 📁 Folder Structure
 
