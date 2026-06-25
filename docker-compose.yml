@@ -1,0 +1,14 @@
+services:
+  goodle:
+    build: .
+    container_name: goodle_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - /home/rahul/goodleTest:/app/goodle_data
+      - ./goodle_index.json:/app/goodle_index.json
+    restart: unless-stopped
+    command: >
+      sh -c "echo 'Goodle is running at: http://localhost:8501' &&
+             streamlit run goodle_app.py --server.port=8501 --server.address=0.0.0.0"
+
