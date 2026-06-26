@@ -1,5 +1,7 @@
 # 🌟 Goodle — A Lightweight Local Search Engine
-<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/2cd71e70-3a48-4ed3-b86a-5f1b939d97ab" />
+
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/48849cce-d061-4b4d-99cd-7e4953006e57" />
+
 
 
 Goodle is a simple, fast, privacy‑friendly local search engine that runs entirely on your computer — indexing only the folder you choose. It scans your PDFs, text files, images, Word documents, and CSVs, then lets you search them instantly through a clean Streamlit UI.
@@ -26,6 +28,8 @@ Absolutely.
 Are there AI tools that do similar things? Sure — but Goodle is local, lightweight, private, and powerful without the complexity.
 
 Developers are welcome to extend it. If you find bugs, tell me — I’ll fix them. Until then, enjoy your cup of tea.
+
+Usage Example:
 ---
 <img width="1201" height="1012" alt="image" src="https://github.com/user-attachments/assets/1a03d70e-960b-4b44-b9e9-f6c0922c0603" />
 
@@ -124,7 +128,7 @@ volumes:
 docker compose down  
 docker compose up -d  
 
-Goodle will re‑index the new folder automatically.
+Goodle will re‑index the new folder do press the re-index button.
 
 ---
 
