@@ -1,31 +1,29 @@
-# 🌟 Goodle — A Lightweight Local Search Engine (With Docker Support)
+# 🌟 Goodle — A Lightweight Local Search Engine
 
-Goodle is a simple, fast, privacy‑friendly local search engine that runs entirely on your computer — specifically on the folder you choose.
-It indexes your documents (PDFs, text files, images, Word files, CSVs) and lets you search them instantly through a clean Streamlit UI.
+Goodle is a simple, fast, privacy‑friendly local search engine that runs entirely on your computer — indexing only the folder you choose. It scans your PDFs, text files, images, Word documents, and CSVs, then lets you search them instantly through a clean Streamlit UI.
 
-Goodle exists for one reason:
-we all dump files into one folder and forget what’s inside.
+We all do it:
+Dump files into one folder… and forget what’s inside.
 
-Students, office workers, note‑takers — anyone who collects screenshots, quick text notes, meeting summaries, reference PDFs — eventually faces the same problem:
-“Where did I save that thing?”
+Students, office workers, note‑takers — anyone who collects screenshots, quick notes, meeting summaries, or reference PDFs eventually faces the same moment:
 
-I’ve been there too. During long meetings I jot things down in text files, save screenshots, download PDFs, and throw everything into one folder. Days later, when I need something, I don’t remember the file name, the format, or even whether it was a screenshot or a document.
+    “Where did I save that thing?”
 
-That’s where Goodle shines.
+I’ve been there too. During long meetings I jot things down, save screenshots, download PDFs, and throw everything into one folder. Days later, I don’t remember the file name, the format, or even whether it was a screenshot or a document.
 
-Use whatever is fastest for you — TextPad, Word, a screenshot, a random PDF — just drop it in your folder.
-Goodle will index it.  
-Then you simply search with any keyword you remember.
+That’s exactly where Goodle shines.
+
+Use whatever is fastest — TextPad, Word, a screenshot, a random PDF — just drop it in your folder.
+Goodle will index it.
+Then you search with any keyword you remember.
 Even if the content is inside an image, Goodle finds it.
 
-Is it cool? 🌟 🌟
+Is it cool? 🌟🌟
+Absolutely.
 
-Are there AI tools that do similar things?
-Sure — but Goodle is simple, local, lightweight, and powerful without the complexity.
+Are there AI tools that do similar things? Sure — but Goodle is local, lightweight, private, and powerful without the complexity.
 
-Developers are welcome to edit, extend, and enhance Goodle.
-If you find bugs, tell me — I’ll fix them.
-Until then, enjoy your cup of tea.
+Developers are welcome to extend it. If you find bugs, tell me — I’ll fix them. Until then, enjoy your cup of tea.
 ---
 <img width="1201" height="1012" alt="image" src="https://github.com/user-attachments/assets/1a03d70e-960b-4b44-b9e9-f6c0922c0603" />
 
@@ -63,7 +61,7 @@ Required for Windows, Mac, Linux.
 
 ### 2️⃣ Download or Clone Goodle
 
-git clone https://github.com/yourname/goodle  
+git clone https://github.com/RahulAloth/goodle  
 cd goodle  
 
 ### 3️⃣ Build Goodle (only once)
@@ -130,12 +128,10 @@ Goodle will re‑index the new folder automatically.
 
 ## 🎁 Release Version (For Non‑Technical Users)
 
-If you want to give Goodle to someone who doesn’t want to compile or build, they only need:
-
-- Docker Desktop installed  
-- The Goodle folder  
-- One file to edit: docker-compose.yml  
-
+They only need:
+    - Docker Desktop
+    - The Goodle folder
+    - One file to edit: docker-compose.yml 
 ### Their steps:
 
 1. Download the Goodle ZIP  
@@ -195,7 +191,8 @@ docker compose down
 ---
 
 ## 🧩 Future Enhancements
-- I am busy, you are welcome to do any modifications. 
+- Feel free to add features, improve indexing, or extend the UI.
+- Goodle is intentionally simple so you can build on top of it.
 
 ---
 
