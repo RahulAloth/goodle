@@ -1,4 +1,6 @@
 # 🌟 Goodle — A Lightweight Local Search Engine
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/2cd71e70-3a48-4ed3-b86a-5f1b939d97ab" />
+
 
 Goodle is a simple, fast, privacy‑friendly local search engine that runs entirely on your computer — indexing only the folder you choose. It scans your PDFs, text files, images, Word documents, and CSVs, then lets you search them instantly through a clean Streamlit UI.
 
