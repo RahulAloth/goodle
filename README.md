@@ -105,30 +105,48 @@ Goodle will start instantly.
 
 ---
 
-## 📂 How to Change the Folder Goodle Indexes
+## 📂 How to Change the Folder Goodle Indexes - Prerequisites
 
-Goodle indexes whatever folder you mount into the container.
+Goodle indexes **whatever folder you mount into the container**.  
+The **left side** of the volume mapping must point to **your local indexing directory** — the folder on your computer that contains the documents you want Goodle to index.
 
-### Step 1 — Edit docker-compose.yml
+### Edit `docker-compose.yml`
 
 Find this section:
 
-volumes:  
-  - /home/rahul/crf_user_guide:/app/goodle_data  
+```yaml
+volumes:
+  - /path/to/your/folder:/app/goodle_data
+```
 
-Replace `/home/rahul/crf_user_guide` with your new folder path.
+Replace `/path/to/your/folder` with the folder you want Goodle to index.
 
-Example:
+### Linux example:
 
-volumes:  
-  - /home/rishaan/my_documents:/app/goodle_data  
+```yaml
+volumes:
+  - /home/rishaan/my_documents:/app/goodle_data
+```
 
-### Step 2 — Restart Goodle
+### Windows example (correct syntax):
 
-docker compose down  
-docker compose up -d  
+```yaml
+volumes:
+  - D:/goodleTest:/app/goodle_data
+```
 
-Goodle will re‑index the new folder do press the re-index button.
+✔ Use **forward slashes**  
+✔ Do **not** use `\\` or `//`  
+✔ Do **not** use backslashes  
+
+### Restart Goodle
+
+```bash
+docker compose down
+docker compose up -d
+```
+
+Goodle will re‑index the new folder (or press the **Re‑Index** button in the UI).
 
 ---
 
