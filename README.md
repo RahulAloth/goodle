@@ -28,17 +28,21 @@ Is it cool? 🌟🌟
 The easiest way to run Goodle is using the official Docker image from GitHub Container Registry.
 
 ### 1️⃣ Install Docker Desktop  
+
 Windows, macOS, or Linux.
 
 ### 2️⃣ Pull the Goodle image
 
+```code
 docker pull ghcr.io/rahulaloth/goodle:v1.0.0
+```
 
 ### 3️⃣ Run Goodle
 
 Replace `/path/to/your/folder` with the folder you want Goodle to index:
 
 Windows:
+
 ```code
 docker run -d -p 8501:8501 -v D:/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
 ```
@@ -85,6 +89,7 @@ No Python. No setup. No dependencies.
 
 If you prefer using `docker-compose.yml`, create a file like this:
 
+```code
 services:
   goodle:
     image: ghcr.io/rahulaloth/goodle:v1.0.0
@@ -93,9 +98,14 @@ services:
     volumes:
       - /path/to/your/folder:/app/goodle_data
 
+```
+
 Run:
 
+```code
 docker compose up -d
+
+```
 
 ---
 
@@ -143,21 +153,29 @@ Not recommended:
 
 If you want to modify Goodle:
 
-git clone https://github.com/RahulAloth/goodle  
+```code
+git clone https://github.com/RahulAloth/goodle
 cd goodle  
 pip install -r requirements.txt  
 streamlit run goodle_app.py
 
+```
+
 Rebuild Docker image after changes:
 
+
+```code
 docker compose build  
 docker compose up -d
+```
 
 Full rebuild:
 
+```code
 docker compose down --rmi all  
 docker compose build  
 docker compose up -d
+```
 
 ---
 
@@ -165,15 +183,23 @@ docker compose up -d
 
 ### Check if Goodle is running
 
+```code
 docker ps
+
+```
 
 ### View logs
 
+```code
 docker compose logs -f
 
+```
 ### Stop Goodle
 
+```code
 docker compose down
+
+```
 
 ---
 
