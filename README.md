@@ -224,6 +224,10 @@ goodle/
 └── README.md             # Documentation  
 
 ---
+# ⚠️ Known Issue: 
+
+#### Import/Export Fails on Windows (Path Format Problem)
+ Goodle import/export currently throws exceptions on Windows if the mounted volume path uses backslashes (\) or if the Windows drive is not shared with Docker Desktop. You can search online for Docker’s Windows path limitations, or simply avoid import/export since Goodle works fine without it.
 
 # 🧩 Future Enhancements
 
