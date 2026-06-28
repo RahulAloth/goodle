@@ -19,7 +19,7 @@ Then you search with any keyword you remember.
 Even if the content is inside an image, Goodle finds it.
 
 Is it cool? 🌟🌟  
-Absolutely.
+
 
 ---
 
@@ -38,15 +38,44 @@ docker pull ghcr.io/rahulaloth/goodle:v1.0.0
 
 Replace `/path/to/your/folder` with the folder you want Goodle to index:
 
-docker run -d \
-  -p 8501:8501 \
-  -v /path/to/your/folder:/app/goodle_data \
-  ghcr.io/rahulaloth/goodle:v1.0.0
+Windows:
+```code
+docker run -d -p 8501:8501 -v D:/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
+```
+Run on Different port
+
+```code
+docker run -d -p 8600:8501 -v D:/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
+```
+Quick check on windows:
+To see what is using port 8501:
+```code
+netstat -ano | findstr :8501
+```
+
+Then:
+```code
+http://localhost:8600
+```
+Linux:
+
+```code
+docker run -d -p 8501:8501 -v /home/Name/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
+```
+If port 8501 is busy on Linux, use:
+```code
+docker run -d -p 8600:8501 -v /home/rishaan/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
+```
+Then Option
+```code
+http://localhost:8600
+```
 
 Open in your browser:
 
+```code
 http://localhost:8501
-
+```
 That’s it.  
 No Python. No setup. No dependencies.
 
