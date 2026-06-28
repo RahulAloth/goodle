@@ -19,7 +19,7 @@ Then you search with any keyword you remember.
 Even if the content is inside an image, Goodle finds it.
 
 Is it cool? 🌟🌟  
-Absolutely.
+
 
 ---
 
@@ -28,25 +28,68 @@ Absolutely.
 The easiest way to run Goodle is using the official Docker image from GitHub Container Registry.
 
 ### 1️⃣ Install Docker Desktop  
+
 Windows, macOS, or Linux.
 
 ### 2️⃣ Pull the Goodle image
 
+```code
 docker pull ghcr.io/rahulaloth/goodle:v1.0.0
+```
 
 ### 3️⃣ Run Goodle
 
 Replace `/path/to/your/folder` with the folder you want Goodle to index:
 
-docker run -d \
-  -p 8501:8501 \
-  -v /path/to/your/folder:/app/goodle_data \
-  ghcr.io/rahulaloth/goodle:v1.0.0
+Windows:
+
+```code
+docker run -d -p 8501:8501 -v D:/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
+```
+Open in your browser:
+```code
+http://localhost:8501
+```
+
+Run on Different port
+
+```code
+docker run -d -p 8600:8501 -v D:/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
+```
+
+Quick check on windows:
+
+To see what is using port 8501:
+```code
+netstat -ano | findstr :8501
+```
+
+Then:
+```code
+http://localhost:8600
+```
+Linux:
+
+```code
+docker run -d -p 8501:8501 -v /home/Name/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
+```
 
 Open in your browser:
 
+```code
 http://localhost:8501
+```
 
+
+If port 8501 is busy on Linux, use:
+
+```code
+docker run -d -p 8600:8501 -v /home/rishaan/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
+```
+Then Option
+```code
+http://localhost:8600
+```
 That’s it.  
 No Python. No setup. No dependencies.
 
@@ -56,6 +99,7 @@ No Python. No setup. No dependencies.
 
 If you prefer using `docker-compose.yml`, create a file like this:
 
+```code
 services:
   goodle:
     image: ghcr.io/rahulaloth/goodle:v1.0.0
@@ -64,9 +108,14 @@ services:
     volumes:
       - /path/to/your/folder:/app/goodle_data
 
+```
+
 Run:
 
+```code
 docker compose up -d
+
+```
 
 ---
 
@@ -114,21 +163,29 @@ Not recommended:
 
 If you want to modify Goodle:
 
-git clone https://github.com/RahulAloth/goodle  
+```code
+git clone https://github.com/RahulAloth/goodle
 cd goodle  
 pip install -r requirements.txt  
 streamlit run goodle_app.py
 
+```
+
 Rebuild Docker image after changes:
 
+
+```code
 docker compose build  
 docker compose up -d
+```
 
 Full rebuild:
 
+```code
 docker compose down --rmi all  
 docker compose build  
 docker compose up -d
+```
 
 ---
 
@@ -136,15 +193,23 @@ docker compose up -d
 
 ### Check if Goodle is running
 
+```code
 docker ps
+
+```
 
 ### View logs
 
+```code
 docker compose logs -f
 
+```
 ### Stop Goodle
 
+```code
 docker compose down
+
+```
 
 ---
 
@@ -159,6 +224,10 @@ goodle/
 └── README.md             # Documentation  
 
 ---
+# ⚠️ Known Issue: 
+
+#### Import/Export Fails on Windows (Path Format Problem)
+ Goodle import/export currently throws exceptions on Windows if the mounted volume path uses backslashes (\) or if the Windows drive is not shared with Docker Desktop. You can search online for Docker’s Windows path limitations, or simply avoid import/export since Goodle works fine without it.
 
 # 🧩 Future Enhancements
 
