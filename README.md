@@ -46,12 +46,19 @@ Windows:
 ```code
 docker run -d -p 8501:8501 -v D:/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
 ```
+Open in your browser:
+```code
+http://localhost:8501
+```
+
 Run on Different port
 
 ```code
 docker run -d -p 8600:8501 -v D:/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
 ```
+
 Quick check on windows:
+
 To see what is using port 8501:
 ```code
 netstat -ano | findstr :8501
@@ -66,19 +73,22 @@ Linux:
 ```code
 docker run -d -p 8501:8501 -v /home/Name/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
 ```
+
+Open in your browser:
+
+```code
+http://localhost:8501
+```
+
+
 If port 8501 is busy on Linux, use:
+
 ```code
 docker run -d -p 8600:8501 -v /home/rishaan/IdentityCardsDetails:/app/goodle_data ghcr.io/rahulaloth/goodle:v1.0.0
 ```
 Then Option
 ```code
 http://localhost:8600
-```
-
-Open in your browser:
-
-```code
-http://localhost:8501
 ```
 That’s it.  
 No Python. No setup. No dependencies.
